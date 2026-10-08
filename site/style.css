@@ -1,0 +1,232 @@
+/* Ordinest — static site styles */
+:root {
+  --navy: #10263f;
+  --navy-2: #173754;
+  --ink: #22303e;
+  --muted: #5b6b7b;
+  --mist: #f4f7fa;
+  --line: #dde5ec;
+  --accent: #d97706;
+  --accent-dark: #b45309;
+  --green: #15803d;
+  --white: #ffffff;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  line-height: 1.6;
+  background: var(--white);
+}
+a { color: var(--navy-2); }
+img { max-width: 100%; }
+
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+header.site {
+  background: var(--navy);
+  color: var(--white);
+}
+header.site .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.brand {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: var(--white);
+  text-decoration: none;
+}
+.brand .dot { color: var(--accent); }
+nav.site a {
+  color: #c9d6e2;
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 15px;
+}
+nav.site a:hover { color: var(--white); }
+
+/* Hero */
+.hero {
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+  color: var(--white);
+  padding: 56px 0 64px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 34px;
+  line-height: 1.25;
+  margin: 0 0 14px;
+}
+.hero p.sub {
+  font-size: 18px;
+  color: #c9d6e2;
+  max-width: 660px;
+  margin: 0 auto 26px;
+}
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 13px 26px;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.btn:hover { background: var(--accent-dark); }
+.btn.ghost {
+  background: transparent;
+  border: 1px solid #55708a;
+  color: var(--white);
+  margin-left: 10px;
+}
+
+/* Sections */
+section { padding: 44px 0; }
+section.mist { background: var(--mist); }
+h2 { font-size: 26px; margin: 0 0 8px; color: var(--navy); }
+.lede { color: var(--muted); margin: 0 0 26px; font-size: 17px; }
+
+/* Steps */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.step {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 20px;
+}
+.step .num {
+  display: inline-block;
+  background: var(--navy);
+  color: var(--white);
+  font-weight: 700;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.step h3 { margin: 4px 0 6px; font-size: 17px; color: var(--navy); }
+.step p { margin: 0; font-size: 15px; color: var(--muted); }
+
+/* City cards */
+.cities { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.city-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 20px;
+  text-decoration: none;
+  color: var(--ink);
+  display: block;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.city-card:hover {
+  box-shadow: 0 6px 18px rgba(16, 38, 63, 0.12);
+  transform: translateY(-2px);
+}
+.city-card h3 { margin: 0 0 6px; font-size: 18px; color: var(--navy); }
+.city-card p { margin: 0; font-size: 14px; color: var(--muted); }
+.city-card .caught {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--green);
+  font-weight: 600;
+}
+
+/* Pricing */
+.plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.plan {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 22px;
+  text-align: center;
+}
+.plan.featured { border: 2px solid var(--accent); position: relative; }
+.plan .tag {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 10px;
+}
+.plan h3 { margin: 0 0 4px; color: var(--navy); font-size: 18px; }
+.plan .price { font-size: 30px; font-weight: 800; color: var(--navy); }
+.plan .price span { font-size: 14px; font-weight: 400; color: var(--muted); }
+.plan ul { text-align: left; padding-left: 20px; margin: 14px 0 0; font-size: 14px; color: var(--muted); }
+.plan ul li { margin-bottom: 5px; }
+
+/* Trust band */
+.trust { background: var(--navy); color: var(--white); padding: 34px 0; }
+.trust .wrap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.trust h3 { margin: 0 0 4px; font-size: 16px; color: var(--accent); }
+.trust p { margin: 0; font-size: 14px; color: #c9d6e2; }
+
+/* City page bits */
+.page-title { font-size: 28px; color: var(--navy); margin: 8px 0 10px; line-height: 1.3; }
+.crumbs { font-size: 14px; color: var(--muted); padding-top: 22px; }
+.crumbs a { color: var(--muted); }
+.watch-list { list-style: none; padding: 0; margin: 0; }
+.watch-list li {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  background: var(--mist);
+  font-size: 15px;
+}
+.watch-list .host { color: var(--muted); font-size: 13px; display: block; }
+.change-log { border-left: 3px solid var(--accent); padding-left: 16px; }
+.change-log article { margin-bottom: 20px; }
+.change-log h3 { margin: 0 0 4px; font-size: 16px; color: var(--navy); }
+.change-log .when { font-size: 13px; color: var(--accent-dark); font-weight: 700; }
+.change-log p { margin: 6px 0 0; font-size: 15px; }
+.change-log a.source { font-size: 13px; }
+
+/* CTA band */
+.cta {
+  background: var(--mist);
+  border-top: 1px solid var(--line);
+  text-align: center;
+  padding: 40px 0;
+}
+.cta h2 { margin-bottom: 6px; }
+.cta p { color: var(--muted); margin-top: 0; }
+
+/* Footer */
+footer.site {
+  background: var(--navy);
+  color: #c9d6e2;
+  padding: 26px 0;
+  font-size: 14px;
+}
+footer.site a { color: #c9d6e2; }
+footer.site .disclaimer {
+  color: #8ea3b8;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+@media (max-width: 760px) {
+  .steps, .plans, .trust .wrap { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 27px; }
+  header.site .wrap { flex-direction: column; gap: 10px; }
+  nav.site a { margin: 0 8px; }
+}

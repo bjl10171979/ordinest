@@ -1,0 +1,48 @@
+{
+  "sources": [
+    {
+      "id": "palm-springs-vacation-rentals",
+      "city": "Palm Springs, CA",
+      "url": "https://www.palmspringsca.gov/?navid=1098",
+      "label": "City of Palm Springs - Vacation Rentals (ordinance updates)",
+      "renderer": "chromium"
+    },
+    {
+      "id": "palm-springs-vacation-rental-info",
+      "city": "Palm Springs, CA",
+      "url": "https://www.palmspringsca.gov/business/vacation-rental-information",
+      "label": "City of Palm Springs - Vacation Rental Information",
+      "renderer": "chromium"
+    },
+    {
+      "id": "nashville-strp",
+      "city": "Nashville, TN",
+      "url": "https://www.nashville.gov/departments/codes/short-term-rentals",
+      "label": "Metro Nashville - Short Term Rental Property"
+    },
+    {
+      "id": "denver-str",
+      "city": "Denver, CO",
+      "url": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Business-Licensing/Business-licenses/Short-term-rentals",
+      "label": "Denver - Short-term rentals (Business Licensing)"
+    },
+    {
+      "id": "new-orleans-str-announcements",
+      "city": "New Orleans, LA",
+      "url": "https://nola.gov/next/short-term-rental-administration/announcements/",
+      "label": "New Orleans - STR Administration Announcements"
+    },
+    {
+      "id": "new-orleans-str-home",
+      "city": "New Orleans, LA",
+      "url": "https://nola.gov/next/short-term-rental-administration/home",
+      "label": "New Orleans - STR Administration Home"
+    },
+    {
+      "id": "south-lake-tahoe-vhr",
+      "city": "South Lake Tahoe, CA",
+      "url": "https://www.cityofslt.gov/2510/Vacation-Home-Rentals",
+      "label": "South Lake Tahoe - Vacation Home Rentals"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+name: Ordinest daily source check
+
+on:
+  schedule:
+    # Every day at 13:00 UTC = 8:00 AM CDT — morning check.
+    - cron: "0 13 * * *"
+  workflow_dispatch: # manual "Run workflow" button for testing
+
+# Public repo = this runs free and unlimited.
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run monitor
+        run: |
+          set -o pipefail
+          python3 monitor.py | tee monitor-output.txt
+
+      - name: Publish results to job summary
+        run: cat monitor-output.txt >> "$GITHUB_STEP_SUMMARY"
+
+      # Snapshots (last known clean copies) and any draft alerts get
+      # committed back so the next run compares against today's state.
+      # The job summary shows any CHANGED lines — that is the signal
+      # to review alerts/alerts/*.md before anything goes to subscribers.
+      - name: Commit snapshots and drafts
+        run: |
+          git config user.name "ordinest-monitor"
+          git config user.email "ordinest-monitor@users.noreply.github.com"
+          git add snapshots alerts
+          if git diff --cached --quiet; then
+            echo "No source changes today."
+          else
+            git commit -m "monitor: source update $(date -u +%F)"
+            git push
+          fi

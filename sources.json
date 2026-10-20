@@ -3,16 +3,8 @@
     {
       "id": "palm-springs-vacation-rentals",
       "city": "Palm Springs, CA",
-      "url": "https://www.palmspringsca.gov/?navid=1098",
-      "label": "City of Palm Springs - Vacation Rentals (ordinance updates)",
-      "renderer": "chromium"
-    },
-    {
-      "id": "palm-springs-vacation-rental-info",
-      "city": "Palm Springs, CA",
-      "url": "https://www.palmspringsca.gov/business/vacation-rental-information",
-      "label": "City of Palm Springs - Vacation Rental Information",
-      "renderer": "chromium"
+      "url": "https://ecode360.com/42991918",
+      "label": "City of Palm Springs - Municipal Code Ch 5.25 Vacation Rentals (ecode360)"
     },
     {
       "id": "nashville-strp",
